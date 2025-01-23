@@ -5,10 +5,12 @@ lst = [list(input()) for _ in range(N)]
 alphabet = [0] * 26
 
 def countChar(x, y):
-    return (x + 1) * (y + 1) * (2 * N - x) * (2 * M - y)
+    return x * y * (1 + 2 * N - x) * (1 + 2 * M - y)
 
-for i in range(2 * N):
-    for j in range (2 * M):
-        alphabet[ord(lst[i % N][j % M]) - 65] += countChar(i, j)
+for i in range(N):
+    for j in range(M):
+        x = i + 1
+        y = j + 1
+        alphabet[ord(lst[i][j]) - 65] += countChar(x, y) + countChar(N + x, y) + countChar(x, M + y) + countChar(N + x, M + y)
 
 print(*alphabet, sep = '\n')
