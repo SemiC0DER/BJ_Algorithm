@@ -1,2 +1,2 @@
 # BJ_Algorithm
-My solutions of algorithm questions of Baekjoon
+My solutions of algorithm problems of Baekjoon
