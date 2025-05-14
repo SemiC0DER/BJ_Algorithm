@@ -1,6 +1,7 @@
 #1197 최소 스패닝 트리
 import sys
 sys.setrecursionlimit(100000)
+input = lambda: sys.stdin.readline().rstrip()
 def getParent(vertex):
     if parent[vertex] == vertex:
         return vertex
